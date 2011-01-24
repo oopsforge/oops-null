@@ -28,5 +28,5 @@ void Init_oops_null(void)
 	mOops = rb_define_module("Oops");
 	cOopsNull = rb_define_class_under(mOops, "Null", rb_cObject);
 
-	rb_define_method(cOopsNull, "boom", boom, 0); 
+	rb_define_singleton_method(cOopsNull, "boom", boom, 0);
 }
