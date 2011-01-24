@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'oops-null'
+
+my_oops = Oops::Null.new
+my_oops.boom
