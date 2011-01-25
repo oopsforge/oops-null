@@ -9,9 +9,15 @@ static VALUE boom(VALUE self)
 
 	pFile = fopen("MyBogusPurchaseOrder.edi", "rb");
 
+	/* Trying to reference a member of a FILE structure through a NULL pointer
+	 * causes a segmentation fault.
+	 */
 	printf("Backing FILE buffer size %d\n", pFile->_bufsiz);
 
-cleanup:
+	/* Because of the segfault this part will never be reached. It is left
+	 * as an example of how an opened file should be closed, thus avoiding
+	 * a potential memory leak.
+	 */
 	fclose(pFile);
 	return Qnil;
 }
