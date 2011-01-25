@@ -5,22 +5,15 @@ VALUE cOopsNull = Qnil;
 
 static VALUE boom(VALUE self)
 {
-	HMODULE hMod = NULL;
-	MYFUNC pFunc = NULL;
-	VALUE rc = Qnil;
+	FILE* pFile;
 
-	/* load the custom DLL */
-	hMod = LoadLibrary(TEXT("MyBogusNonExistent.dll"));
+	pFile = fopen("MyBogusPurchaseOrder.edi", "rb");
 
-	/* get a pointer to the desired function */
-	pFunc = (MYFUNC) GetProcAddress(hMod, TEXT("MyBogusFunction"));
+	printf("Backing FILE buffer size %d\n", pFile->_bufsiz);
 
-	/* call the desired function */
-	(pFunc)();
-
-	/* done */
-	FreeLibrary(hMod);
-	return Qtrue;
+cleanup:
+	fclose(pFile);
+	return Qnil;
 }
 
 void Init_oops_null(void)

@@ -7,8 +7,4 @@ if ENV['BUILD_DEBUG_LIB']
   CONFIG['debugflags'] << ' -ggdb3 -O0'
 end
 
-unless find_library('kernel32', 'LoadLibraryA')
-  abort '[ERROR] unable to find kernel32 library.'
-end
-
 create_makefile('oops_null/oops_null')
