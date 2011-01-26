@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'rubygems/package_task'
 require 'rake/extensiontask'
 
 begin
@@ -40,7 +41,7 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency('rake-compiler', ['>= 0.7.5'])
 end
 
-Rake::GemPackageTask.new(spec) do |pkg|
+Gem::PackageTask.new(spec) do |pkg|
 end
 
 Rake::ExtensionTask.new('oops_null', spec) do |ext|
