@@ -1,7 +1,8 @@
 require 'mkmf'
 
 # override normal build configuration to build debug friendly library
-if ENV['BUILD_DEBUG_LIB']
+# if installed via 'gem install oops-null -- --enable-debug'
+if enable_config('debug')
   puts '[INFO] enabling debug library build configuration.'
   if RUBY_VERSION < '1.9'
     $CFLAGS = CONFIG['CFLAGS'].gsub(/\s\-O\d?\s/, ' -O0 ')
