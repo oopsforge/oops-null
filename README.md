@@ -8,11 +8,15 @@ Diagnostic tool authors and novice debuggers rejoice!
 
 ## Usage
 
-1. Install a GCC-based toolchain such as the [DevKit](http://rubyinstaller.org/add-ons/devkit/)
-2. Type `gem install oops-null` or to install a debug-enabled version, type
+1. Type `gem install oops-null` or, to install a debug-enabled version, type
    `gem install oops-null -- --enable-debug`
-3. Run `nulloops` or create a Ruby script with `require 'oops-null'; Oops::Null.boom`
+2. Run `nulloops` or create a Ruby script with `require 'oops-null'; Oops::Null.boom`
 
-## License 
+## Requirements
+
+1. MRI Ruby 1.8.7 or 1.9.2
+2. A GCC-based toolchain. For Windows, consider using the [DevKit](http://rubyinstaller.org/add-ons/devkit/)
+
+## License
 
 3-clause BSD. See project LICENSE file.
