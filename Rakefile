@@ -13,10 +13,15 @@ end
 
 spec = Gem::Specification.new do |s|
   s.name = 'oops-null'
-  s.summary = 'A segfaulting native RubyGem for Windows'
-  s.description = 'A native RubyGem for Windows that segfaults due to dereferencing a NULL pointer'
+  s.summary = 'A segfaulting native RubyGem for Windows and Linux'
+
+  s.description = <<-EOT
+A native RubyGem for Windows and Linux that segfaults the Ruby interpreter
+by dereferencing a NULL pointer
+EOT
+
   s.homepage = 'http://oopsforge.github.com/'
-  s.version = '0.2.0'
+  s.version = '0.3.0'
   s.date = Time.now.strftime('%Y-%m-%d')
 
   s.authors = ['Jon Maken']
