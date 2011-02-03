@@ -22,13 +22,13 @@ EOT
 
   s.require_paths = %w[lib]
 
-  s.files = Dir.glob('bin/nulloops')
-  s.files << Dir.glob(['ext/**/extconf.rb', 'ext/**/*.{c,h}'])
-  s.files << Dir.glob(['lib/**/*.rb', 'lib/**/*.so'])
-  s.files << %w[
+  s.files = %w[
+    bin/nulloops
     Rakefile
     oops-null.gemspec
   ]
+  s.files += Dir.glob(['ext/**/extconf.rb', 'ext/**/*.{c,h}'])
+  s.files += Dir.glob(['lib/**/*.rb', 'lib/**/*.so'])
 
   s.rubygems_version = '1.3.7'
   s.add_development_dependency('rake-compiler', ['>= 0.7.5'])
