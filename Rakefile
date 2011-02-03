@@ -11,7 +11,7 @@ rescue LoadError
   abort '[ERROR] build environment unavailable or misconfigured'
 end
 
-spec = eval("#{File.read('oops-null.gemspec')}")
+spec = eval("#{File.read('oops-null.gemspec')}", binding, __FILE__, __LINE__)
 
 Gem::PackageTask.new(spec) do |pkg|
 end
