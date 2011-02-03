@@ -15,7 +15,8 @@ Diagnostic tool authors and novice debuggers rejoice!
 ## Requirements
 
 1. MRI Ruby 1.8.7 or 1.9.2
-2. A GCC-based toolchain. For Windows, consider using the [DevKit](http://rubyinstaller.org/add-ons/devkit/)
+2. An installed [rake-compiler](http://github.com/luislavena/rake-compiler) RubyGem
+3. A GCC-based toolchain. For Windows, consider using the [DevKit](http://rubyinstaller.org/add-ons/devkit/)
 
 ## License
 
