@@ -8,7 +8,7 @@ by dereferencing a NULL pointer
 EOT
 
   s.homepage = 'http://oopsforge.github.com/'
-  s.version = '0.3.0'
+  s.version = '0.3.1'
   s.date = Time.now.strftime('%Y-%m-%d')
 
   s.authors = ['Jon Maken']
@@ -31,5 +31,5 @@ EOT
   s.files += Dir.glob(['lib/**/*.rb', 'lib/**/*.so'])
 
   s.rubygems_version = '1.3.7'
-  s.add_development_dependency('rake-compiler', ['>= 0.7.5'])
+  s.add_development_dependency('rake-compiler', ['>= 0.7.6'])
 end
